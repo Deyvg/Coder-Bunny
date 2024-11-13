@@ -1,57 +1,161 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ga+Maamli&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <title>Easy Gyan</title>
+    <title>Introduction to Programming</title>
+    <style>
+        /* Reset some basic styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Body background and center alignment */
+        body {
+            background: linear-gradient(to bottom, #000000, #3a2a6a);
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            height: 100vh;
+            padding: 0 10px;
+        }
+
+        /* Navbar styling */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 600px;
+            padding: 20px 0;
+        }
+
+        .navbar .left h1 {
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
+        .navbar .left p {
+            margin-left: 5px;
+            font-size: 0.8rem;
+        }
+
+        .navbar .center a,
+        .navbar .right a {
+            color: #ffffff;
+            margin: 0 5px;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .navbar .right a {
+            background: linear-gradient(to right, #b657ff, #d17aff);
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        /* Content styling */
+        .content {
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .content h2 {
+            font-size: 1.5rem;
+            font-weight: normal;
+            margin-bottom: 10px;
+        }
+
+        .content h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        /* Button styling */
+        .content .next-button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 20px;
+            font-size: 1rem;
+            font-weight: bold;
+            color: #ffffff;
+            background: linear-gradient(to right, #d17aff, #b657ff);
+            cursor: pointer;
+        }
+
+        /* Footer styling */
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 600px;
+            padding: 20px 0;
+            font-size: 0.8rem;
+            text-align: center;
+        }
+
+        /* Mobile Styles */
+        @media (max-width: 600px) {
+            .navbar {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .navbar .center {
+                margin: 10px 0;
+            }
+
+            .content h2 {
+                font-size: 1.2rem;
+            }
+
+            .content h1 {
+                font-size: 2rem;
+            }
+
+            .footer {
+                flex-direction: column;
+                gap: 5px;
+            }
+        }
+    </style>
 </head>
 <body>
-       <div id="menu">
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li>
-                <a href="#">Course</a>
-                <ul>
-                    <li><a href="#">Python</a>
-                       <ul>
-                            <li><a href="#">Notes</a>
-                            </li>
-                            <li><a href="#">Programs</a>
-                            </li>
-                       </ul>
-                    </li>
-                    <li><a href="#">C</a></li>
-
-                </ul>
-            </li>
-            <li><a href="#">About</a>
-                <ul>
-                    <h4>CD bunny</h4>
-                </ul>
-            </li>
-            <li><a href="#">E-Books</a>
-            <ul>
-                <li><a href="https://books.ebalbharati.in/">State Board</a></li>
-                <li><a href="https://ncert.nic.in/textbook.php">NCERT</a></li>
-            </ul>
-            </li>
-            <li><a href="#">Notes</a></li>
-        </ul>
-    </div>
-    <div class="contant">
-        <div class="logi">
-            <img src="cdbunny.png" alt="cdbunny">
-        <h1>Coder Bunny</h1>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="left">
+            <h1>Thynk</h1>
+            <p>Unlimited.</p>
+        </div>
+        <div class="center">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Content</a>
+            <a href="#">Others</a>
+        </div>
+        <div class="right">
+            <a href="#">Page 01</a>
         </div>
     </div>
-    <p class="lg">
-        Welcome to Coder Bunny!
-        
-        At Coder Bunny, we hop into the world of coding with enthusiasm and curiosity. Whether you're a beginner just starting out or an experienced programmer looking to sharpen your skills, this channel has something for everyone.
-    </p>
+
+    <!-- Main Content -->
+    <div class="content">
+        <h2>Introduction to</h2>
+        <h1>Programming</h1>
+        <button class="next-button">Next Slide</button>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>www.reallygreatsite.com</p>
+        <p>hello@reallygreatsite.com</p>
+    </div>
 </body>
 </html>
