@@ -13,7 +13,11 @@
             box-sizing: border-box;
             font-family: Arial, sans-serif;
         }
-
+@keyframes fadeSymbols {
+        0% { opacity: 0; transform: scaleY(0.5); }
+        50% { opacity: 1; transform: scaleY(1); }
+        100% { opacity: 0; transform: scaleY(0.5); }
+}
         /* Body background and center alignment */
         body {
             background: linear-gradient(to bottom, #000000, #3a2a6a);
@@ -25,7 +29,13 @@
             height: 100vh;
             padding: 0 10px;
         }
-
+ .animated-symbol {
+        position: absolute;
+        font-size: 20px;
+        color: rgba(255, 255, 255, 0.5);
+        opacity: 0;
+        animation: fadeSymbols 3s infinite ease-in-out;
+ }
         /* Navbar styling */
         .navbar {
             display: flex;
@@ -164,5 +174,25 @@
         <i class="fas fa-envelope"></i>
         <p>cdbunny89@gmail.com</p>
     </div>
+
+    function createSymbols() {
+        for (let i = 0; i < 30; i++) {
+            let symbol = document.createElement('div');
+            symbol.classList.add('animated-symbol');
+            symbol.textContent = '</>';
+            document.body.appendChild(symbol);
+            
+            let x = Math.random() * window.innerWidth;
+            let y = Math.random() * window.innerHeight;
+            let delay = Math.random() * 3;
+            let duration = Math.random() * 3 + 2;
+            
+            symbol.style.left = `${x}px`;
+            symbol.style.top = `${y}px`;
+            symbol.style.animationDuration = `${duration}s`;
+            symbol.style.animationDelay = `${delay}s`;
+        }
+    }
+    createSymbols();
 </body>
 </html>
